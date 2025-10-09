@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paleta de cores rústicas */
+:root {
+  --clr-bg: #F3EFE0;
+  --clr-primary: #B48E68;
+  --clr-secondary: #7C6B57;
+  --clr-accent: #D9B48F;
+  --clr-text: #3F3830;
+}
+
+/* Base */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: var(--clr-bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--clr-text);
+}
+
+/* Cartão central */
+.backdrop {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--clr-secondary);
+}
+
+/* Texto principal */
+.texto-convite {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.texto-convite h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+
+.texto-convite p {
+  max-width: 40rem;
+  margin: 0.5rem auto;
+  line-height: 1.6;
+  color: var(--clr-secondary);
+}
+
+/* Contador */
+.contador {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contador .box {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contador .valor {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.contador .rotulo {
+  font-size: 0.875rem;
+  color: var(--clr-secondary);
+}
+
+/* Mapa */
+.mapa iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.mapa a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+/* Formulário */
+.rsvp {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+}
+
+.rsvp label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.rsvp input,
+.rsvp textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #DDD;
+  border-radius: 0.5rem;
+}
+
+.rsvp input:focus,
+.rsvp textarea:focus {
+  border-color: var(--clr-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 142, 104, 0.3);
+}
+
+.rsvp button {
+  background-color: var(--clr-accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rsvp button:hover {
+  background-color: var(--clr-primary);
+}
+
+/* Mensagens */
+.mensagens li {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+.mensagens .nome {
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+
+.mensagens .texto {
+  font-size: 0.875rem;
+  color: var(--clr-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--clr-secondary);
+}
+
+/* Animação */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

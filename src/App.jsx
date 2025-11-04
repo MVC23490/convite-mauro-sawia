@@ -80,13 +80,54 @@ export default function App() {
         {/* Cabeçalho */}
         <header>
           <h1>Mauro Chiau &amp; Sawia Cossa</h1>
-          <p>28 de Novembro de 2025 • Bairro de Intaka 2, Q25, Casa 358</p>
+          <p>28 de Novembro de 2025 • Bairro de Intaka,Paragem Baraquinha</p>
                               <p className="frase-poetica">
             “O amor é o laço invisível que une duas almas destinadas.”
           </p>
         </header>
+                  {/* Bloco de informações principais */}
+                  <section className="info-principal fade-in">
+                    <div className="info-item">
+                      <span className="info-icon">📅</span>
+                      <h3>Data & Hora</h3>
+                      <p>28 de Novembro de 2025 às 15h00</p>
+                    </div>
+                    <div className="info-item">
+                      <span className="info-icon">📍</span>
+                      <h3>Local</h3>
+                      <p>Bairro de Intaka,Paragem Baraquinha</p>
+                    </div>
+                    <div className="info-item">
+                      <span className="info-icon">👗</span>
+                      <h3>Dress Code</h3>
+                      <p>Elegante com toque dourado</p>
+                    </div>
+                  </section>
 
        <HeroCarousel />
+       {/* Linha temporal do dia */}
+              <section className="timeline fade-in">
+                <h2>Programa do Dia</h2>
+                <ul>
+                  <li>
+                    <span className="hora">13h00</span>
+                    <span className="evento">Casamento Religioso, na igreja Santa Teresa</span>
+                  </li>
+                  <li>
+                    <span className="hora">15h00</span>
+                    <span className="evento">Cerimónia</span>
+                  </li>
+                  <li>
+                    <span className="hora">17h00</span>
+                    <span className="evento">Sessão de fotos e convívio</span>
+                  </li>
+                  <li>
+                    <span className="hora">19h00</span>
+                    <span className="evento">Jantar e celebração</span>
+                  </li>
+                </ul>
+              </section>
+
 
         {/* Mensagem central */}
         <section className="texto-convite fade-in">
@@ -113,7 +154,7 @@ export default function App() {
         <section className="mapa fade-in">
           <iframe
             title="Local do casamento"
-            src={`https://www.google.com/maps?q=${encodeURIComponent('Bairro de Intaka 2, Q25, Casa 358')}&output=embed`}
+            src={`https://www.google.com/maps?q=${encodeURIComponent('Bairro de Intaka,Paragem baraquinha')}&output=embed`}
             allowFullScreen
           ></iframe>
 

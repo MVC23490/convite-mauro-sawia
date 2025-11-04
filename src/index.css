@@ -291,6 +291,128 @@ footer {
   animation: fadeInUp 0.8s forwards ease-out;
 }
 
+/* ----------------------------------------------------------
+   BLOCO DE INFORMAÇÕES PRINCIPAIS
+---------------------------------------------------------- */
+.info-principal {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 1.5rem;
+  margin: 2rem auto 2.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.info-item {
+  background: #ffffffb8;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(166,123,91,0.15);
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.info-item h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--clr-primary);
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.info-item p {
+  color: var(--clr-secondary);
+  font-size: 0.95rem;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+}
+
+/* ----------------------------------------------------------
+   LINHA TEMPORAL
+---------------------------------------------------------- */
+.timeline {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 500px;
+}
+
+.timeline h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2rem;
+  color: var(--clr-primary);
+  margin-bottom: 1.2rem;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid var(--clr-accent);
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline li::before {
+  content: "●";
+  position: absolute;
+  left: -0.45rem;
+  color: var(--clr-primary);
+  font-size: 0.9rem;
+  top: 0;
+}
+
+.timeline .hora {
+  font-weight: 600;
+  color: var(--clr-primary);
+  display: block;
+}
+
+.timeline .evento {
+  color: var(--clr-secondary);
+  font-size: 0.95rem;
+}
+
+/* ----------------------------------------------------------
+   QR CODE / PARTILHA
+---------------------------------------------------------- */
+.convite-digital {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  background: #fffdfb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.convite-digital h2 {
+  font-family: 'Alex Brush', cursive;
+  color: var(--clr-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.qrcode {
+  width: 130px;
+  height: 130px;
+  margin: 0.5rem auto 1rem;
+  display: block;
+}
+
+.convite-digital a {
+  color: var(--clr-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
 @keyframes fadeInUp {
   to {
     opacity: 1;

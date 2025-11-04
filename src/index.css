@@ -1,71 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Paleta de cores rústicas */
+/* ----------------------------------------------------------
+   PALETA RÚSTICA E ELEGANTE
+---------------------------------------------------------- */
 :root {
-  --clr-bg: #F3EFE0;
-  --clr-primary: #B48E68;
-  --clr-secondary: #7C6B57;
-  --clr-accent: #D9B48F;
+  --clr-bg: #F8F5F0;
+  --clr-primary: #A67B5B;
+  --clr-secondary: #6E5A47;
+  --clr-accent: #C89F7A;
   --clr-text: #3F3830;
 }
 
-/* Base */
-html, body, #root {
+/* ----------------------------------------------------------
+   IMPORTAÇÃO DE FONTES
+   (ordem e sintaxe corrigidas)
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+   BASE
+---------------------------------------------------------- */
+html, #root {
   height: 100%;
   margin: 0;
   background-color: var(--clr-bg);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', serif;
   color: var(--clr-text);
 }
 
+/* Fundo com leve textura de papel */
+body {
+  background: linear-gradient(to bottom, #f9f6f1, #f4ede6);
+  background-image: radial-gradient(circle at 20% 20%, rgba(182,140,98,0.05) 0%, transparent 70%);
+  background-attachment: fixed;
+}
+
+
+
 /* Cartão central */
 .backdrop {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+  border: 1px solid rgba(166,123,91,0.15);
 }
 
-/* Cabeçalho */
+/* ----------------------------------------------------------
+   CABEÇALHO
+---------------------------------------------------------- */
 header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0; /* reduz espaço */
+  padding: 3rem 0 2rem;
+  background: linear-gradient(to bottom, #fdfaf5 0%, #f7f1ea 100%);
+  border-bottom: 1px solid rgba(182,140,98,0.2);
 }
+
+header {
+  margin-bottom: 0.5rem;
+}
+
+
+
+.HeroCarousel {
+  border: 10px solid rgba(182,140,98,0.15);
+  border-radius: 20rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
 
 header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--clr-primary);
+  font-family: 'Alex Brush', cursive !important;
+  font-size: 3.2rem;
+  font-weight: 400;
+  background: linear-gradient(90deg, #b68c62, #d2b48c, #b68c62);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
 }
 
+/* 🔸 Ornamento decorativo sob o nome */
+header h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #b68c62, transparent);
+  margin: 0.8rem auto 0;
+  border-radius: 999px;
+}
+
+/* 🔸 Subtítulo (data e local) */
 header p {
-  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
   color: var(--clr-secondary);
+  letter-spacing: 0.3px;
+  margin-top: 0.5rem;
 }
 
-/* Texto principal */
+/* ----------------------------------------------------------
+   TEXTO PRINCIPAL
+---------------------------------------------------------- */
 .texto-convite {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .texto-convite h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Alex Brush', cursive;
+  font-size: 2.2rem;
   color: var(--clr-primary);
+  margin-bottom: 0.5rem;
 }
 
 .texto-convite p {
+  font-family: 'Playfair Display', serif;
   max-width: 40rem;
   margin: 0.5rem auto;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--clr-secondary);
+  font-size: 1rem;
 }
 
-/* Contador */
+.frase-poetica {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--clr-secondary);
+  margin-top: 0.8rem;
+}
+
+
+/* ----------------------------------------------------------
+   CONTADOR
+---------------------------------------------------------- */
 .contador {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -78,21 +156,24 @@ header p {
   border-radius: 0.75rem;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid rgba(166,123,91,0.1);
 }
 
 .contador .valor {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--clr-primary);
 }
 
 .contador .rotulo {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--clr-secondary);
 }
 
-/* Mapa */
+/* ----------------------------------------------------------
+   MAPA
+---------------------------------------------------------- */
 .mapa iframe {
   width: 100%;
   height: 220px;
@@ -103,23 +184,36 @@ header p {
 .mapa a {
   display: inline-block;
   margin-top: 0.75rem;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--clr-primary);
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid var(--clr-accent);
+  padding-bottom: 2px;
+  transition: color 0.3s;
 }
 
-/* Formulário */
+.mapa a:hover {
+  color: var(--clr-secondary);
+}
+
+/* ----------------------------------------------------------
+   FORMULÁRIO RSVP
+---------------------------------------------------------- */
 .rsvp {
   background: #ffffff;
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   margin-bottom: 2rem;
+  border: 1px solid rgba(166,123,91,0.15);
 }
 
 .rsvp label {
   display: block;
   margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--clr-secondary);
 }
 
 .rsvp input,
@@ -128,13 +222,14 @@ header p {
   padding: 0.75rem;
   border: 1px solid #DDD;
   border-radius: 0.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .rsvp input:focus,
 .rsvp textarea:focus {
   border-color: var(--clr-primary);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(180, 142, 104, 0.3);
+  box-shadow: 0 0 0 3px rgba(180, 142, 104, 0.25);
 }
 
 .rsvp button {
@@ -144,20 +239,25 @@ header p {
   border: none;
   border-radius: 9999px;
   font-weight: 600;
+  font-family: 'Playfair Display', serif;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .rsvp button:hover {
   background-color: var(--clr-primary);
 }
 
-/* Mensagens */
+/* ----------------------------------------------------------
+   MENSAGENS
+---------------------------------------------------------- */
 .mensagens li {
   background: #fff;
   border-radius: 0.5rem;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
   box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  border: 1px solid rgba(166,123,91,0.1);
 }
 
 .mensagens .nome {
@@ -166,19 +266,25 @@ header p {
 }
 
 .mensagens .texto {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   color: var(--clr-secondary);
   margin-top: 0.25rem;
 }
 
-/* Rodapé */
+/* ----------------------------------------------------------
+   RODAPÉ
+---------------------------------------------------------- */
 footer {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--clr-secondary);
+  margin-top: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
-/* Animação */
+/* ----------------------------------------------------------
+   ANIMAÇÕES
+---------------------------------------------------------- */
 .fade-in {
   opacity: 0;
   transform: translateY(10px);

@@ -1,6 +1,8 @@
 // App.jsx — Convite Virtual Mauro & Sawia
 import React, { useEffect, useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import HeroCarousel from "./components/HeroCarousel";
+
 
 export default function App() {
   // ----- CONFIG -----
@@ -8,7 +10,7 @@ export default function App() {
   const EMAILJS_SERVICE_ID = 'service_fn4sly8';
   const EMAILJS_TEMPLATE_ID = 'template_lkop56b';
   const WEDDING_DATE = new Date('2025-11-29T15:00:00');
-  const MAP_LINK = 'https://maps.app.goo.gl/5bfSZANtbq3Jyaci8?g_st=ic';
+  const MAP_LINK = 'https://maps.app.goo.gl/PKe4yty2o1mD8mah9';
   const AUDIO_SRC = null;
   // -------------------
 
@@ -78,8 +80,13 @@ export default function App() {
         {/* Cabeçalho */}
         <header>
           <h1>Mauro Chiau &amp; Sawia Cossa</h1>
-          <p>29 de Novembro de 2025 • Bairro de Intaka 2, Q25, Casa 358</p>
+          <p>28 de Novembro de 2025 • Bairro de Intaka 2, Q25, Casa 358</p>
+                              <p className="frase-poetica">
+            “O amor é o laço invisível que une duas almas destinadas.”
+          </p>
         </header>
+
+       <HeroCarousel />
 
         {/* Mensagem central */}
         <section className="texto-convite fade-in">
@@ -88,6 +95,9 @@ export default function App() {
             Convidamo-vos a testemunhar este momento único em nossas vidas — o início da nossa jornada como marido e mulher.
             Traga o seu sorriso e boa vibe!
           </p>
+
+
+
           
         </section>
 
@@ -106,6 +116,7 @@ export default function App() {
             src={`https://www.google.com/maps?q=${encodeURIComponent('Bairro de Intaka 2, Q25, Casa 358')}&output=embed`}
             allowFullScreen
           ></iframe>
+
           <a href={MAP_LINK} target="_blank" rel="noreferrer">Abrir no Maps</a>
         </section>
 

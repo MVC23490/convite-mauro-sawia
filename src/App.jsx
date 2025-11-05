@@ -97,11 +97,7 @@ export default function App() {
                       <h3>Local</h3>
                       <p>Bairro de Intaka,Paragem Baraquinha</p>
                     </div>
-                    <div className="info-item">
-                      <span className="info-icon">👗</span>
-                      <h3>Dress Code</h3>
-                      <p>Elegante com toque dourado</p>
-                    </div>
+                    
                   </section>
 
        <HeroCarousel />
@@ -111,7 +107,7 @@ export default function App() {
                 <ul>
                   <li>
                     <span className="hora">13h00</span>
-                    <span className="evento">Casamento Religioso, na igreja Santa Teresa</span>
+                    <span className="evento">Casamento Religioso, na igreja Santa Teresa de Calcutá</span>
                   </li>
                   <li>
                     <span className="hora">15h00</span>

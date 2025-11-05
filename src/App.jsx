@@ -115,16 +115,9 @@ export default function App() {
                   </li>
                   <li>
                     <span className="hora">15h00</span>
-                    <span className="evento">Cerimónia</span>
+                    <span className="evento">Inicio da Celebração no Salão</span>
                   </li>
-                  <li>
-                    <span className="hora">17h00</span>
-                    <span className="evento">Sessão de fotos e convívio</span>
-                  </li>
-                  <li>
-                    <span className="hora">19h00</span>
-                    <span className="evento">Jantar e celebração</span>
-                  </li>
+                  
                 </ul>
               </section>
 
